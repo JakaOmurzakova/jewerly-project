@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jewelry-shop</title>
+    <link rel="stylesheet/less" href="./src/css/style.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+  </head>
+
+  <body>
+    <section class="navbar">
+      <div class="container">
+        <div class="left">
+          <div class="logo">
+            <img src="./src/images/Logo.png" alt="Logo" />
+          </div>
+          <nav class="menu">
+            <ul class="menu-list">
+              <li><a href="#"> Каталог </a></li>
+              <li><a href="#"> О нас </a></li>
+              <li id="calculate">
+                <a href="#">
+                  <img src="./src/images/calculator.png" alt="calculator" />
+                  Расчет по эскизам
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="call-back">
+          <div>
+            <div><img src="./src/images/phone-call.png" alt="Phone" /></div>
+            <p class="number-phone">8(800) 000 00 00</p>
+          </div>
+          <div class="call-number"><p>Заказать звонок</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="main">
+      <div class="container">
+        <div class="main-text">
+          <h1 class="main-title">Эксклюзивные украшения только для Вас!</h1>
+          <div class="main-photo-media">
+            <img src="/src/images/main-photo.png" alt="bg" />
+          </div>
+          <div class="main-info">
+            Вы всегда мечтали об изделии, но вам везде говорят, что это слишком
+            сложно? Для нас это не проблема! Наши опытные мастера воплощают в
+            жизнь самые невероятные эскизы.
+          </div>
+          <button class="btn">В каталог</button>
+        </div>
+        <div class="main-photo">
+          <img src="./src/images/main-photo.png" alt="main-photo" />
+        </div>
+      </div>
+    </section>
+
+    <section class="director">
+      <div class="container">
+        <div class="director-photo">
+          <img src="./src/images/director-photo.png" alt="director" />
+        </div>
+        <div class="director-text">
+          <h2 class="director-title">
+            Ювелирный дом Алмаз-это техника, умение и талант!
+          </h2>
+          <div class="director-info">
+            <div class="first-text">
+              <p class="letter">К</p>
+              <p>
+                рупное ювелирное производство с сетью салонов и офисов в Москве
+                и Санкт-Петербурге, большой производственной базой и обширным
+                штатом блестящих мастеров-ювелиров, дизайнеров, ювелирных
+                стилистов и других специалистов.
+              </p>
+            </div>
+            <p>
+              Мы занимаемся производством необычных, эксклюзивных ювелирных
+              украшений от эскиза до конечной продажи, а также предоставляем
+              весь спектр ювелирных услуг. Когда-то мы начинали как небольшая,
+              но амбициозная команда профессионалов, влюбленных в свое дело. ЮД
+              Алмаз сегодня – это большой, четко отлаженный процесс по созданию
+              ювелирных украшений вашей мечты.
+            </p>
+            <div class="signature">
+              <img src="./src/images/pngwing.com.png" alt="signature" />
+              <p>Иванов Д.В. Генеральный директор</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog">
+      <div class="container">
+        <h2 class="catalog-title">Выберите свое уникальное изделие</h2>
+        <div class="catalog-body">
+          <div class="catalog-navigation">
+            <h3 class="small-title">Каталог</h3>
+            <ul class="catalog-list">
+              <li><span>Броши</span></li>
+              <li><span>Серьги</span></li>
+              <li><span>Кольца</span></li>
+              <li><span>Кулоны</span></li>
+              <li><span>Браслеты и цепочки</span></li>
+            </ul>
+            <h3 class="small-title">Не нашли то, что искали?</h3>
+            <div class="catalog-text">
+              Приложите фотографию, укажите Ваши пожелания и мы рассчитаем
+              стоимость изделия.
+            </div>
+            <button class="btn btn-price">Рассчитать</button>
+          </div>
+          <div class="catalog-items">
+            <div class="catalog-item1">
+              <div class="catalog-image">
+                <img src="./src/images/jewelry-1.png" alt="jewelry" />
+              </div>
+              <div class="catalog-desc">
+                <div>Женское кольцо с бриллиантами</div>
+                <p>На заказ</p>
+                <button class="catalog-btn">Уточнить цену</button>
+              </div>
+            </div>
+            <div class="catalog-item2">
+              <div class="catalog-image">
+                <img src="./src/images/jewelry-2.png" alt="jewelry" />
+              </div>
+              <div class="catalog-desc">
+                <div class="catalog-item-title">
+                  Женское кольцо с бриллиантом 0,5карат
+                </div>
+                <p>На заказ</p>
+                <button class="catalog-btn">Уточнить цену</button>
+              </div>
+            </div>
+            <div class="catalog-item3">
+              <div class="catalog-image">
+                <img src="./src/images/jewelry-3.png" alt="jewelry" />
+              </div>
+              <div class="catalog-desc">
+                <div class="catalog-item-title">
+                  Женское кольцо Сабрина из золота
+                </div>
+                <p>На заказ</p>
+                <button class="catalog-btn">Уточнить цену</button>
+              </div>
+            </div>
+            <div class="catalog-item4">
+              <div class="catalog-image">
+                <img src="./src/images/jewelry-4.png" alt="jewelry" />
+              </div>
+              <div class="catalog-desc">
+                <div class="catalog-item-title">
+                  Женское кольцо Сабрина с бриллиантами
+                </div>
+                <p>На заказ</p>
+                <button class="catalog-btn">Уточнить цену</button>
+              </div>
+            </div>
+            <div class="catalog-item5">
+              <div class="catalog-image">
+                <img src="./src/images/jewelry-5.png" alt="jewelry" />
+              </div>
+              <div class="catalog-desc">
+                <div class="catalog-item-title">
+                  Женское двойное кольцо с бриллиантами
+                </div>
+                <p>На заказ</p>
+                <button class="catalog-btn">Уточнить цену</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why">
+      <div class="why-bg">
+        <img src="./src/images/why-bg.png" alt="background" />
+      </div>
+
+      <div class="sale">
+        <div class="sale-frame">
+          <div class="sale-item">
+            -35%
+            <p>на все кольца</p>
+            <button class="btn">Заказать</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="why-list">
+        <div class="container">
+          <h2 class="why-title">Почему выбирают нас</h2>
+          <div class="why-items">
+            <div class="why-item">
+              <div class="why-item-image">
+                <img src="./src/images/ring.png" alt="ring" />
+              </div>
+              <h4 class="why-item-title">Точность размеров</h4>
+              <div class="why-item-text">
+                Кольца размерами <br />
+                от 15,5
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-item-image">
+                <img src="./src/images/diamond.png" alt="diamond" />
+                <img src="./src/images/hammer.png" alt="hammer" />
+              </div>
+              <h4 class="why-item-title">Производство</h4>
+              <div class="why-item-text">
+                Каждое изделие изготавливается в ручную
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-item-image">
+                <img src="./src/images/fast-time.png" alt="time" />
+              </div>
+              <h4 class="why-item-title">Сроки изготовления</h4>
+              <div class="why-item-text">
+                От 14 до 30 дней <br />
+                Срочное изготовление - 7 дней
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-item-image">
+                <img src="./src/images/clipboard.png" alt="clipboard" />
+              </div>
+              <h4 class="why-item-title">Гарантия</h4>
+              <div class="why-item-text">
+                Мы даем пожизненную гарантию на наши изделия
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-item-image">
+                <img src="./src/images/lorry.png" alt="lorry" />
+              </div>
+              <h4 class="why-item-title">Доставка</h4>
+              <div class="why-item-text">
+                Доставим готовые изделия в любой город России и стран СНГ
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="workshop">
+      <div class="container">
+        <h2 class="workshop-title">Наша мастерская</h2>
+        <div class="workshop-content">
+          <div class="workshop-content-left">
+            <div class="workshop-content-text">
+              Ювелирный Дом Алмаз — новая звезда на небосводе ювелирного мира.
+              Главный приоритет компании — клиент, удовлетворенный качественным
+              и эксклюзивным украшением. Каждое наше изделие проходит строжайший
+              контроль качества, который обеспечивают специалисты.
+            </div>
+            <div class="workshop-content-image">
+              <img
+                src="./src/images/yuvelir_034973463563473487.png"
+                alt="workshop"
+              />
+            </div>
+          </div>
+          <div class="workshop-content-right">
+            <div class="workshop-content-image">
+              <img src="./src/images/maxresdefault.png" alt="workshop" />
+            </div>
+            <div class="workshop-content-text">
+              Клиенты, обратившиеся к нам, сами участвуют в процессе по созданию
+              и воплощению своей ювелирной мечты, будь то легкое колечко с
+              необычным рисунком или большая подвеска с уникальным бриллиантом.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="reviews">
+      <div class="container">
+        <h2 class="reviews-title">Отзывы о нас</h2>
+        <div class="slide">
+          <div class="slide-item">
+            <div class="slide-image">
+              <img src="./src/images/comment.png" alt="comment-photo" />
+              <div class="photo"></div>
+            </div>
+            <div class="slide-text">
+              Делала на заказ украшение в золоте. Выполнено на высшем уровне!
+              Кольцо и серьги необыкновенной красоты. Ювелирный Дом Алмаз-
+              профессионал своего дела! Всем своим друзьям и знакомым
+              рекомендую!
+            </div>
+          </div>
+          <div class="slide-item">
+            <div class="slide-image">
+              <img src="./src/images/comment2" alt="comment-photo" />
+              <div class="photo"></div>
+            </div>
+            <div class="slide-text">
+              Благодарен Ювелирному Дому Алмаз за изумительные украшения!
+              Заказывал кольцо и серьги, все сделано безупречно. Очень доволен
+              результатом, рекомендую всем!
+            </div>
+          </div>
+          <div class="slide-item">
+            <div class="slide-image">
+              <img src="./src/images/comment3" alt="comment-photo" />
+              <div class="photo"></div>
+            </div>
+            <div class="slide-text">
+              Заказала у Ювелирного Дома Алмаз комплект украшений и осталась в
+              восторге! Прекрасное качество и исключительное исполнение.
+              Рекомендую всем знакомым и друзьям!
+            </div>
+          </div>
+          <div class="slide-item">
+            <div class="slide-image">
+              <img src="./src/images/comment4.jpeg" alt="comment-photo" />
+              <div class="photo"></div>
+            </div>
+            <div class="slide-text">
+              Ювелирный Дом Алмаз порадовал безупречной работой! Кольцо и
+              серьги, выполненные на заказ, превзошли все ожидания. Буду
+              советовать всем друзьям!
+            </div>
+          </div>
+          <div class="slide-item">
+            <div class="slide-image">
+              <img src="./src/images/comment5.jpeg" alt="comment-photo" />
+              <div class="photo"></div>
+            </div>
+            <div class="slide-text">
+              В восторге от работы Ювелирного Дома Алмаз! Сделали потрясающие
+              украшения на заказ. Качество и красота на высоте! Всем знакомым
+              рекомендую!
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="col col-1">
+          <div class="logo">
+            <img src="./src/images/Logo.png" alt="Logo" />
+          </div>
+          <p class="number-mail">+7 (900) 14-14-333 info@almaz.ru</p>
+          <p class="number-mail">г.Москва Миллионная ул.5</p>
+        </div>
+
+        <div class="col col-2">
+          <h4 class="footer-title">Часы работы</h4>
+          <p>Ежедневно с 9:00- до 21:00</p>
+          <p class="col-2-text">
+            Согласуйте свой визит перед посещением мастерской
+          </p>
+        </div>
+
+        <div class="col col-3">
+          <div class="social-name">
+            <h4 class="footer-title">Соцсети</h4>
+            <p>Инстаграм Фейсбук Вконтакте Телеграм-канал</p>
+          </div>
+        </div>
+
+        <div class="col col-4">
+          <div class="social">
+            <h4 class="footer-title">Соцсети</h4>
+            <div class="social-image">
+              <div class="social-image-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="35"
+                  height="35"
+                  viewBox="0 0 35 35"
+                >
+                  <image
+                    id="facebook"
+                    width="35"
+                    height="35"
+                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAABB0lEQVRYhe2YPQrCQBBGn6KFIPjT2Aha6G0U7ew8gWewsLDWA6TwFpZWHkAvoGCpiKU2K4EIMezKJhMlwn4Q2Oxmvzwms8OQnFJKkRHlswKCg/mgTMEUUvB4AGtgB1wia1OgZmskPU1bYAScDOsHoGVrJomMH4UBcBZ4vEmSM6s0QRBGZqeZqwK9kG/5VzA3zdwSGCc1TPtoVySb/7rOXIFZMN5r1j1gE7qfAyVb87h15gi0LZ8tAnf/Hbbm3/xMjTggfBnGuvK+FDdn6sAiGHuavJkAnWDcjQuDSq6hn26RayPwU66fMcnBmORgTHIwJjkYkyRtZ1/TTjQlMO4vhEkOxqTswABPRDCuYplPVA0AAAAASUVORK5CYII="
+                  />
+                </svg>
+              </div>
+              <div class="social-image-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="35"
+                  height="35"
+                  viewBox="0 0 35 35"
+                >
+                  <image
+                    id="instagram-3"
+                    width="35"
+                    height="35"
+                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAACJ0lEQVRYhe2XPUxUQRSFv+eiFVljoHE7u81WdMbCioqNPYWtDbGlBAugpLCntrSmojIhL7ExFkgsMDaoCeDuZivJes2YA95s3ryfJQ/WhJNM5u/MnZN739w3k5jZV+A+N4/+jIRMgxjuTIGGS9yKiWGmJO8LsAccA1bBfgK0gEXgUSHbzHoWx5mZLZtZOHVcoSSyc5azVy9PTFjYvqKI8dLOEdTL+2ZWgEO1u0AK9CYoqdYjeytVw3TkQtPNcW0R3pvZZ3G69i9kR1XCtOPcm04o5K3W3zOzT7JzYXMnS0zsNB27djvCGQG7OmUnwLxOzRLQAH6I9wv4CXQi9i8RE1N0fD8Az4GDsfHX2vQN8AL4DcwBT8K/p8h+2TwzLuQpMFT/rjY8Bc4lMMy/A15WMVw1A4/kkaES2rpC9E31usaH4o3qFLPrQrMGbABN9Zvqr6l/IH5tYvZUh9CsRjirmvf8WsScqJ5zHhlHU/OeX4uYedXhYx1EOAPNe34tYhZVh1OzHeFsa97zaxGz5JLXFvDKeWig/pb6HfFrE9NQQptV4tpUKB6q3tT4rHiNOsUELCihXXgohOS7C01H8wtVDccycFJC0MeCf1MeMu3HxLRcO9xBHmdwwobPVMrg0HFamfya7zMeE99nTHdWnKBU3KoldUKQ3Sz8P3fgB8A+sFzigy5CIjv7spuJ5K97it/a1/Fu6pcVcx3o3761Y5i6h7+/td8coP8HIE7qtIHuzmkAAAAASUVORK5CYII="
+                  />
+                </svg>
+              </div>
+              <div class="social-image-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="35"
+                  height="35"
+                  viewBox="0 0 35 35"
+                >
+                  <image
+                    id="vk"
+                    width="35"
+                    height="35"
+                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAABpElEQVRYhe2XPyhFYRjGn+tPJF1KuYPIaJAwKYrBKAuLkpIsdqPdaLiYLCSFQSaLATEYLJRSd5JSFkqSwU+nzq2v0/udc697hzucp966vd973+d3vvOe892bAVCNqK5WQJTCxCiF8SmF8SmF8anhn98L3toXkj6cXJOkyQp6StjaBQadGAbOncpboCc4SSKxE+n2DowAvU70AQeWqw/myjAaitTcGDUbkZp1oyaIw3JgAo0aTc6c9bcEmG+g23NRv5Zh3ACveXLFU749YQLykp4juWZJe5Iy5cxM3O7kw7X3mJ15AdqM9a04sySYayATaZgFnoA7w2wV+AHGjLXZBK9EmEDzRuNOoN/ItwADRr4L+KgGzCvQ4XkqSo2ZEnxiB7ionKTtEuridCLpOLGqFOJQyxXuTj2wX+ltKioYzOkEwxxwDyzGAJ1WA4YQaMV4woqx5NQueGpagYLVvNxTu1HSpqRLSVPh4eiqz/m8I2nO6PEp6chqXun/pi9Jj5JewrfruAH4IKngekqakJStNkxVlf7S8ymF8SmF8SmF8al2YCT9AYC99lwLuBdbAAAAAElFTkSuQmCC"
+                  />
+                </svg>
+              </div>
+              <div class="social-image-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="35"
+                  height="35"
+                  viewBox="0 0 35 35"
+                >
+                  <image
+                    id="telegram"
+                    width="35"
+                    height="35"
+                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAACHElEQVRYhe2Xz4tNYRjHP3dMyCzskGExKAqh0GQxEQsbTCk2VjaT/4GNpQUbNmRSkoiyoSlTNjZTNmQjzUhTMpq4149ZmMZHR+/V6Xbee8654467uN96Op33fZ7nfs573vM8762o74HV/H/VegNIJ8DQ0wEMf9WFiakLE9NSwswAl4DtwPUsh942AywAT4Cb4TofxvuWEuYtMArcAj5mzO9tN8wccD9APAeM+CUFdmu7YCbCa7gHfG2YOwVMAS9SY5mrwiI28CxwGdgBDAI3GkA2A2PApgaQRPuiWdWqxbSgPlZPqstVMmyFekH9oY5EfB5Gfq1aBGZSPa/2R5LX7bD6Rv2pnm7iN10WJkl4Wz2kVnIg1qp3QtycerSJ77omDx2FuZYDkFiPek79EmJq6oGcmGOtwPxSx9Uzal9G0j3qRMp/Rt1Z4AEutgKT1jd1VB0Kr2y3Op+af6duKQCS2NhiYdK6og6m7l+rGwqCJDbbDKbyh6j4sXMaGAA+AatCPflQMDapOZNN5mtlK/BGYBfwFFhfAiTR/jyHVirwcKiuUyXjom2grlZ60wngCPA5NdYf2sKjcGzIUu7KlN3AdQ2kNuVQ+LQTPYtU6mXq95yc1VYb5XC4jgDjwJpwfxB4CRxv8N8WO1D9i5VJ+suDHJ+r6sqwMmcL5CxdZ8rqVajWd4vAlK0z7VSt+78ppi5MTB0Fk7SDWgdwANR+Axi2LsZJlHMAAAAAAElFTkSuQmCC"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <h4 class="footer-title">Подписка на рассылку</h4>
+          <p>Сообщим о новинках и скидках</p>
+          <form type="button">
+            <input type="text" placeholder="E-mail" />
+            <button>Подписаться</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <div class="popup-check-price">
+      <div class="container">
+        <div class="popup-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M 19.990234 2.9863281 A 1.0001 1.0001 0 0 0 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 A 1.0001 1.0001 0 0 0 3.9902344 2.9902344 A 1.0001 1.0001 0 0 0 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 A 1.0001 1.0001 0 1 0 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 A 1.0001 1.0001 0 1 0 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 A 1.0001 1.0001 0 0 0 19.990234 2.9863281 z"
+            ></path>
+          </svg>
+        </div>
+        <div class="popup-text-body">
+          <h2 class="popup-title">Уточняйте цену на это изделие</h2>
+          <div class="popup-text">
+            Заполните контактные данные и укажите Ваши пожелания, если это
+            требуется.<br />
+            Мы рассчитаем стоимость изделия с учетом Ваших пожеланий и свяжемся
+            с Вами!
+          </div>
+        </div>
+        <form class="popup-price-form" action="submit">
+          <input type="text" class="popup-input" placeholder="Имя" />
+          <input type="text" class="popup-input" placeholder="Телефон" />
+          <input type="text" class="popup-input" placeholder="E-mail" />
+          <textarea name="message" placeholder="Ваши пожелания"></textarea>
+          <button class="popup-btn">Уточнить стоимость</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup-calc">
+      <div class="container">
+        <div class="popup-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M 19.990234 2.9863281 A 1.0001 1.0001 0 0 0 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 A 1.0001 1.0001 0 0 0 3.9902344 2.9902344 A 1.0001 1.0001 0 0 0 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 A 1.0001 1.0001 0 1 0 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 A 1.0001 1.0001 0 1 0 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 A 1.0001 1.0001 0 0 0 19.990234 2.9863281 z"
+            ></path>
+          </svg>
+        </div>
+
+        <div class="popup-calc-top">
+          <div class="popup-text">
+            <div class="top-title">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="49"
+                height="64"
+                viewBox="0 0 49 64"
+              >
+                <image
+                  id="notepad"
+                  width="49"
+                  height="64"
+                  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAABACAYAAACz4p94AAAEE0lEQVRoge2aW6gWVRTHf36eNK0Q1DQ1hKinNJXKHjTETCPSEz50ERETBDFUkKJXn6R8ENEwUCQvBSJogVZEF4wSKo8UaUcIb3hA83IMlUyPWmfJ0jWy3H3nm+/M7M8zD/ODgZk9e/ae/77vtVcvESEyFeB1YA7wNDAQ+AtoAbYAnwJxM1UREa9HRGSf1GaPiAyPmW/MmngY+BkYUUfco8AE4GyMjCsxEjG2BAJ+BRYCLwGLgAPu3aPA+lgZV6uJey3jZ4Hh9pxGP+AFF2eDCeh0YU3Ax8AsF/YF8G8d6V8BTgA/AF8B1+54G7Sv10TkZEqbTuOYiDR10X77iciZnOkfF5EZPl2fwTs5E09YltIRV0XIo1NEFoYdexrwdVCFe4H9VpWexy2+8jew0b37E1j9v+q+k/7AUmCIC30T6GP3n1vH9+g3TwFPurBOa/I/JaWz36m8KCJTa5TkPBf3eKRh8oJLc2aNeC+LyD8urg7XN0en0cAYp3AB8G2Nkuxw9/fXiFcvvYPB42qN73ZZLSZoTYxUEeNc4AVge0rmR9z9IBvv8zAV6Ou+D5tSyEdBQY5TEYNdQFswLFZDx/+TLny9icnCMOAD990fwKGUdLSmzrjngU0ZMlaR77rMtTm2AmuA34JS6gqdV8YDi4EHXZzlWUoiiwhlHfAi0GzPDwHvZUwrYatd3SbrskNr49VgeM3DWmBe1tVtnrWTts35wERbN7WlzA/ht8eAD61ZLQGuZ/2RrM3J86NdPUbMVWwpIg+liKJQiigKpYiiUIooCqWIotDTItTCsRm4BKzMmkhPilDjwA7gDeA+4G3ggSwJxViKZ6G/2Zeec9/uMztWt+mJmqgmQPfo07MmeLdFDAC+DAT8AkwB2rMmmkfEWsv4fTOApTHATKWTXDw9PXo+jwBy9IkRduaA7Y/V7jQX+K+L+ImAZ1xYix0HXMz4D7fJWhN6wnPYPc82y9w9VeKqXWlPIOA7q4HcAsgh4rq1Y29yVCGfOOs2JmA38IQLUwEzbG6IQp4+oSc3kwMhzTb297Emt9sshAnfmIDLsQQQYXRKhBx0Yc02hH4fCPisEQKINMSesCGz1YVNs8PFBBXwSjeMa90i1jzRbn2ktcq7bY0UQOTJrt3mgBYXttU8CxomgAasnc7boYnOIeeATTXmjmg0YgGoi7gVjf5xT7kpKgqliKJQiigKpYiiUIooCqWIolAJNutDiv27N+ltDsMJlyrB1nKYbW6KzPTAZtuqLmkVEWkLXOIei+y5HOsaJSKn3b/+7h0Z55qTSUKHbSsP1um32mh03zPWfNC9bWsmsNOX0IYIrp53k1XV/GJ7mU9rR8F//rKIvJXm8D7SNvfq6Ti0TmNxo9F9+ilzs1ZXbb2/BXADMOJrrfc1lBYAAAAASUVORK5CYII="
+                />
+              </svg>
+              <h4>Заполните форму</h4>
+            </div>
+            <div class="top-text">
+              Пришлите нам Ваши пожелания по украшению: картинку или ссылку на
+              сайт и его параметры. Вы можете оставить только свой контактный
+              номер и мы с Вами свяжемся для уточнения всех деталей.
+            </div>
+          </div>
+        </div>
+
+        <form class="popup-form-buttons">
+          <div class="popup-left">
+            <div class="popup-input">
+              <input type="text" id="inp-name" placeholder="Имя" />
+              <p>Заполните поле Имя</p>
+            </div>
+            <div class="popup-input">
+              <input type="text" id="inp-phone" placeholder="Телефон" />
+              <p>Заполните поле Телефон</p>
+            </div>
+            <div class="popup-input">
+              <input type="text" id="inp-mail" placeholder="E-mail" />
+              <p>Заполните поле E-mail</p>
+            </div>
+            <div class="popup-file">
+              <input
+                type="text"
+                class="popup-input"
+                placeholder="Приложить файл"
+              />
+              <button>Загрузить</button>
+            </div>
+            <div class="popup-checkbox">
+              <label for="with">
+                <input type="checkbox" id="with" />
+                С камнями
+              </label>
+              <label for="without">
+                <input type="checkbox" id="without" />
+                Без камней
+              </label>
+            </div>
+            <div class="popup-input">
+              <div class="size">
+                <input type="text" id="inp-size" placeholder="Размер изделия" />
+                <p>Выберите размер изделия</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="12"
+                  height="7"
+                  viewBox="0 0 12 7"
+                >
+                  <image
+                    id="next"
+                    width="12"
+                    height="7"
+                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHCAYAAAA8sqwkAAAAkElEQVQYlX3QPQ5BURCG4YdYAIlGr9VrxB7UcguVHYjq9jq1xAYkKgmxAitQaVSWQYYhN4r7JieZ8/1kck5jWkyumOGiniG2TZQ4YFATDy8yZQs7tHHCGLe/cD+9ZWSjEGzQSWOER+q91NaZ8S0EK3RxzlIQ8z69N9VCsMhNx7zHR4T2Ix5d5Yk57nliDu0DXovaGmBQr9R2AAAAAElFTkSuQmCC"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="popup-right">
+            <div class="textarea">
+              <textarea
+                name="message"
+                id="inp-message"
+                placeholder="Опишите ваши пожелания"
+              ></textarea>
+              <p>Заполните поле ваши пожелания</p>
+            </div>
+            <button class="popup-button" type="submit">Отправить</button>
+          </div>
+        </form>
+        <div class="success-text">
+          Спасибо, мы свяжемся с вами в ближайшее время!
+        </div>
+      </div>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script src="./src/scripts/slick.min.js"></script>
+    <script src="./src/scripts/main.js"></script>
+  </body>
+</html>
