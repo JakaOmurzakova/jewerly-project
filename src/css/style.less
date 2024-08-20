@@ -84,6 +84,8 @@ body {
 .catalog-btn-mixin() {
   max-width: 170px;
   height: 42px;
+  padding-left: 10px;
+  padding-right: 10px;
   border: 2px solid rgb(255, 255, 255);
   font-family: PlayRegular, sans-serif;
   font-size: 18px;
@@ -162,6 +164,9 @@ body {
           border-bottom: 1px solid rgb(255, 255, 255);
         }
       }
+    }
+    .img-320 {
+      display: none;
     }
   }
 }
@@ -290,6 +295,12 @@ body {
       font-family: Oranienbaum, sans-serif;
       text-align: center;
     }
+    .catalog-text {
+      margin-bottom: 40px;
+    }
+    .catalog-select {
+      display: none;
+    }
     .catalog-body {
       padding-top: 85px;
       display: flex;
@@ -302,18 +313,18 @@ body {
           margin-bottom: 20px;
         }
         .catalog-list {
-          margin-bottom: 105px;
+          margin-bottom: 95px;
           li {
             list-style-type: none;
             padding: 6px 0;
             cursor: pointer;
           }
         }
-        .catalog-text {
-          margin-bottom: 40px;
-        }
         .btn {
           .btn-mixin();
+        }
+        .catalog-select {
+          display: none;
         }
       }
       .catalog-items {
@@ -337,8 +348,8 @@ body {
             }
           }
           .catalog-desc {
-            display: none;
             width: 255px;
+            display: none;
             .catalog-desc-mixin ();
             p {
               .catalog-p-mixin();
@@ -705,8 +716,15 @@ body {
     }
     .col-3 {
       width: 130px;
+      p {
+        cursor: pointer;
+      }
     }
     .col-4 {
+      .footer-form {
+        margin-top: 25px;
+      }
+
       .social {
         display: none;
       }
@@ -717,6 +735,7 @@ body {
           width: 240px;
           height: 49px;
           box-sizing: border-box;
+          outline: none;
           background-color: rgb(255, 255, 255);
           border: none;
           padding: 15px 25px;
@@ -731,6 +750,10 @@ body {
           color: rgb(255, 255, 255);
           font-size: PlayRegular, sans-serif;
         }
+      }
+      .footer-success {
+        display: none;
+        font-size: 16px;
       }
     }
   }
@@ -783,8 +806,11 @@ body {
       justify-content: center;
       align-items: center;
       gap: 15px;
-      .popup-input {
+      .popup-input input {
         .popup-input-mixin();
+      }
+      .popup-input p {
+        color: transparent;
       }
       textarea {
         padding: 20px;
@@ -805,6 +831,12 @@ body {
         font-size: 16px;
         margin-bottom: 130px;
       }
+    }
+    .success-price {
+      display: none;
+      text-align: center;
+      font-size: 30px;
+      padding-top: 115px;
     }
   }
 }

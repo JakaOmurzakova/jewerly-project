@@ -6,100 +6,183 @@ $(document).ready(() => {
     cssEase: "linear",
   });
 
-  const url = "https://testologia.ru/checkout";
-  const form = $(".popup-form-buttons");
-  const popupCalc = $(".popup-calc");
-  const popupClose = $(".popup-close");
-  const inputs = {
-    name: $("#inp-name"),
-    phone: $("#inp-phone"),
-    mail: $("#inp-mail"),
-    message: $("#inp-message"),
-    size: $("#inp-size"),
-  };
-  const menu = $(".catalog-list li span");
-  const popupPrice = $(".popup-check-price");
+  new WOW().init();
 
+  let popupCalc = $(".popup-calc");
+  let popupPrice = $(".popup-check-price");
+  let catalogMenu = $(".catalog-list li span");
+  let url = "https://testologia.ru/checkout/";
+
+  //показ попап при клике на "Расчет на эскизам" и кнопку "Рассчитать"
   $("#calculate").click(() => {
     popupCalc.show();
   });
 
-  popupClose.each((index, element) => {
-    $(element).click(() => {
+  $(".btn-price").click(() => {
+    popupPrice.show();
+  });
+
+  //скрытие попапов при клике на "х"
+  $(".popup-close").each((i, elem) => {
+    $(elem).click(() => {
       popupCalc.hide();
       popupPrice.hide();
     });
   });
 
-  const setErrorStyles = (input) => {
-    input.css("border-color", "rgb(218, 27, 27)");
-    input.next().css("color", "rgb(218, 27, 27)");
-  };
+  //показ названия товаров
+  $(".catalog-image").hover(
+    function () {
+      $(this).next().show();
+    },
+    function () {
+      let nextElem = $(this).next();
+      setTimeout(function () {
+        if (!nextElem.is(":hover")) {
+          nextElem.hide();
+        }
+      }, 200);
+    }
+  );
 
-  const validateInputs = () => {
-    let isValid = true;
-    const params = {};
-
-    Object.keys(inputs).forEach((key) => {
-      const input = inputs[key];
-      const value = input.val().trim();
-      if (!value) {
-        isValid = false;
-        setErrorStyles(input);
-      } else {
-        params[key] = value;
-        input.css("border-color", "");
-        input.next().css("color", "");
+  $(".catalog-image")
+    .next()
+    .hover(
+      function () {
+        $(this).show();
+      },
+      function () {
+        $(this).hide();
       }
+    )
+    .on("click", function () {
+      popupPrice.show();
+      $(this).hide();
     });
 
-    return { isValid, params };
-  };
-
-  form.submit((event) => {
-    event.preventDefault();
-
-    const { isValid, params } = validateInputs();
-
-    if (isValid) {
-      $.ajax({
-        url,
-        method: "POST",
-        data: params,
-      })
-        .done((msg) => {
-          if (msg.success === 1) {
-            form.hide();
-            $(".success-text").show();
-          } else {
-            $(".popup-input input").val("");
-            inputs.message.val("");
-            popupCalc.hide();
-            alert(
-              "Возникла ошибка при оформлении заказа, позвоните нам и сделайте заказ"
-            );
-          }
-        })
-        .fail((jqXHR, textStatus) => {
-          alert(`Request failed: ${textStatus}`);
-        });
-    }
-  });
-
-  menu.each((index, element) => {
+  // меню переключение
+  catalogMenu.each((index, element) => {
     $(element).click(() => {
-      menu.css({
+      catalogMenu.css({
         "border-bottom": "",
         "border-color": "",
       });
       $(element).css({
         "border-bottom": "1px solid",
-        "border-color": "rgb(255,255,255)",
+        "border-color": "rgb(255, 255, 255)",
       });
     });
   });
 
-  $(".btn-price").click(() => {
-    popupPrice.show();
+  // при нажатии на кнопку заказать со скидкой скрол до товаров
+  $(".sale-btn").click(() => {
+    $("html, body").animate(
+      {
+        scrollTop: $(".catalog").offset().top,
+      },
+      1000
+    );
+  });
+
+  // валидация футера
+  $(".footer-form button").click((e) => {
+    e.preventDefault();
+    if ($(".footer-form input").val()) {
+      $(".footer-form").hide();
+      $(".footer-success").css("display", "block");
+    }
+  });
+
+  // при наведении на названия соц.сетей непрозрачность на 90%
+  $(".social-name p").hover(
+    function () {
+      $(this).css("color", "rgba(200, 200, 200, 0.9)");
+    },
+    function () {
+      $(this).css("color", "");
+    }
+  );
+
+  // валидация и отправка запроса попапа "Расчет по эскизам"
+
+  function checkInputs(input) {
+    input.next("p").css("color", "red");
+    input.css("border-color", "red");
+    return false;
+  }
+
+  let inputName = $("#inp-name");
+
+  $("#calc-btn").click(function (e) {
+    e.preventDefault();
+
+    let isValid = true;
+
+    if (inputName.val().trim() === "") {
+      checkInputs(inputName);
+      isValid = false;
+    }
+  });
+
+  // валидация  и отправка запроса
+
+  let name = $("#name");
+  let phone = $("#phone");
+  let mail = $("#mail");
+  let message = $("#message");
+
+  $(".popup-btn").click(function (e) {
+    e.preventDefault();
+
+    $(".popup-price-input").css("border-color", "");
+    $(".error-message").css("color", "transparent");
+
+    let isValid = true;
+
+    if (!name.val()) {
+      name.css("border-color", "red");
+      name.next().css("color", "red");
+      console.log(name.val());
+      isValid = false;
+    }
+    if (!phone.val()) {
+      phone.css("border-color", "red");
+      phone.next().css("color", "red");
+      console.log(phone.val());
+      isValid = false;
+    }
+    if (!mail.val()) {
+      mail.css("border-color", "red");
+      mail.next().css("color", "red");
+      console.log(mail.val());
+      isValid = false;
+    }
+    if (!message.val()) {
+      message.css("border-color", "red");
+      message.next().css("color", "red");
+      console.log(message.val());
+      isValid = false;
+    }
+
+    if (isValid) {
+      $.ajax({
+        url: url,
+        type: "POST",
+        data: {
+          name: name.val(),
+          phone: phone.val(),
+          mail: mail.val(),
+          message: message.val(),
+        },
+        success: function (response) {
+          console.log("Form submitted successfully", response);
+          popupCalc.hide();
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+          console.error("Form submission failed: ", textStatus, errorThrown);
+          popupCalc.hide();
+        },
+      });
+    }
   });
 });
