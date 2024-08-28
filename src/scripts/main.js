@@ -16,10 +16,12 @@ $(document).ready(() => {
   //показ попап при клике на "Расчет на эскизам" и кнопку "Рассчитать"
   $("#calculate").click(() => {
     popupCalc.show();
+    $("body").css("overflow", "hidden");
   });
 
   $(".btn-price").click(() => {
     popupPrice.show();
+    $("body").css("overflow", "hidden");
   });
 
   //скрытие попапов при клике на "х"
@@ -27,38 +29,9 @@ $(document).ready(() => {
     $(elem).click(() => {
       popupCalc.hide();
       popupPrice.hide();
+      $("body").css("overflow", "");
     });
   });
-
-  //показ названия товаров
-  $(".catalog-image").hover(
-    function () {
-      $(this).next().show();
-    },
-    function () {
-      let nextElem = $(this).next();
-      setTimeout(function () {
-        if (!nextElem.is(":hover")) {
-          nextElem.hide();
-        }
-      }, 200);
-    }
-  );
-
-  $(".catalog-image")
-    .next()
-    .hover(
-      function () {
-        $(this).show();
-      },
-      function () {
-        $(this).hide();
-      }
-    )
-    .on("click", function () {
-      popupPrice.show();
-      $(this).hide();
-    });
 
   // меню переключение
   catalogMenu.each((index, element) => {
@@ -103,33 +76,13 @@ $(document).ready(() => {
     }
   );
 
-  // валидация и отправка запроса попапа "Расчет по эскизам"
-
-  function checkInputs(input) {
-    input.next("p").css("color", "red");
-    input.css("border-color", "red");
-    return false;
-  }
-
-  let inputName = $("#inp-name");
-
-  $("#calc-btn").click(function (e) {
-    e.preventDefault();
-
-    let isValid = true;
-
-    if (inputName.val().trim() === "") {
-      checkInputs(inputName);
-      isValid = false;
-    }
-  });
-
-  // валидация  и отправка запроса
+  // валидация  и отправка запроса попа check-price
 
   let name = $("#name");
   let phone = $("#phone");
   let mail = $("#mail");
   let message = $("#message");
+  let successText = $(".success-price");
 
   $(".popup-btn").click(function (e) {
     e.preventDefault();
@@ -142,25 +95,21 @@ $(document).ready(() => {
     if (!name.val()) {
       name.css("border-color", "red");
       name.next().css("color", "red");
-      console.log(name.val());
       isValid = false;
     }
     if (!phone.val()) {
       phone.css("border-color", "red");
       phone.next().css("color", "red");
-      console.log(phone.val());
       isValid = false;
     }
     if (!mail.val()) {
       mail.css("border-color", "red");
       mail.next().css("color", "red");
-      console.log(mail.val());
       isValid = false;
     }
     if (!message.val()) {
       message.css("border-color", "red");
       message.next().css("color", "red");
-      console.log(message.val());
       isValid = false;
     }
 
@@ -176,7 +125,89 @@ $(document).ready(() => {
         },
         success: function (response) {
           console.log("Form submitted successfully", response);
+          if (response.success === 0) {
+            alert("Что то пошло нет, попробуйте по позже");
+            popupPrice.hide();
+          } else if (response.success === 1) {
+            $(".popup-price-form").hide();
+            successText.show();
+          }
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+          console.error("Form submission failed: ", textStatus, errorThrown);
           popupCalc.hide();
+        },
+      });
+    }
+    name.val("");
+    phone.val("");
+    mail.val("");
+    message.val("");
+    successText.hide();
+  });
+
+  // валидация и отправка запроса  popup-calc
+
+  let calcName = $("#inp-name");
+  let calcPhone = $("#inp-phone");
+  let calcMail = $("#inp-mail");
+  let calcSize = $("#inp-size");
+  let calcMessage = $("#inp-message");
+  let calcSuccess = $("#success-text");
+
+  $(".calc-btn").click(function (e) {
+    e.preventDefault();
+
+    $(".popup-input input").css("border-color", "");
+    $(".popup-input p").css("color", "transparent");
+
+    let isValid = true;
+
+    if (!calcName.val()) {
+      calcName.css("border-color", "red");
+      calcName.next().css("color", "red");
+      isValid = false;
+    }
+    if (!calcPhone.val()) {
+      calcPhone.css("border-color", "red");
+      calcPhone.next().css("color", "red");
+      isValid = false;
+    }
+    if (!calcMail.val()) {
+      calcMail.css("border-color", "red");
+      calcMail.next().css("color", "red");
+      isValid = false;
+    }
+    if (!calcSize.val()) {
+      calcSize.css("border-color", "red");
+      calcSize.next().css("color", "red");
+      isValid = false;
+    }
+    if (calcMessage === "") {
+      calcMessage.css("border-color", "red");
+      calcMessage.next().css("color", "red");
+      isValid = false;
+    }
+
+    if (isValid) {
+      $.ajax({
+        url: url,
+        type: "POST",
+        data: {
+          name: calcName.val(),
+          phone: calcPhone.val(),
+          mail: calcMail.val(),
+          message: calcMessage.val(),
+        },
+        success: function (response) {
+          console.log("Form submitted successfully", response);
+          if (response.success === 0) {
+            alert("Что то пошло нет, попробуйте по позже");
+            popupCalc.hide();
+          } else if (response.success === 1) {
+            $(".popup-price-form").hide();
+            calcSuccess.show();
+          }
         },
         error: function (jqXHR, textStatus, errorThrown) {
           console.error("Form submission failed: ", textStatus, errorThrown);
